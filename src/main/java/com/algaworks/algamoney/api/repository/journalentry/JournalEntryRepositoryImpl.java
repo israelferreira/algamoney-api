@@ -18,6 +18,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.util.StringUtils;
 
 import com.algaworks.algamoney.api.dto.JournalEntryCategoryStatistics;
+import com.algaworks.algamoney.api.dto.JournalEntryPerDayStatistics;
+import com.algaworks.algamoney.api.dto.JournalEntryPersonStatistics;
 import com.algaworks.algamoney.api.model.Category_;
 import com.algaworks.algamoney.api.model.JournalEntry;
 import com.algaworks.algamoney.api.model.JournalEntry_;
@@ -30,6 +32,69 @@ public class JournalEntryRepositoryImpl implements JournalEntryRepositoryQuery {
 	
 	@PersistenceContext
 	private EntityManager manager;
+	
+	@Override
+	public List<JournalEntryPersonStatistics> byPerson(LocalDate begin, LocalDate end) {
+		CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
+		
+		CriteriaQuery<JournalEntryPersonStatistics> criteriaQuery = criteriaBuilder.
+				createQuery(JournalEntryPersonStatistics.class);
+		
+		Root<JournalEntry> root = criteriaQuery.from(JournalEntry.class);
+		
+		criteriaQuery.select(criteriaBuilder.construct(JournalEntryPersonStatistics.class,
+				root.get(JournalEntry_.entryType),
+				root.get(JournalEntry_.person),
+				criteriaBuilder.sum(root.get(JournalEntry_.amount))));
+		
+		criteriaQuery.where(
+				criteriaBuilder.greaterThanOrEqualTo(root.get(JournalEntry_.dueDate), 
+						begin),
+				criteriaBuilder.lessThanOrEqualTo(root.get(JournalEntry_.dueDate), 
+						end));
+		
+		criteriaQuery.groupBy(root.get(JournalEntry_.entryType),
+				root.get(JournalEntry_.person));
+		
+		TypedQuery<JournalEntryPersonStatistics> typedQuery = manager
+				.createQuery(criteriaQuery);
+		
+		return typedQuery.getResultList();
+	}
+	
+	
+	@Override
+	public List<JournalEntryPerDayStatistics> byDay(LocalDate referenceMonth) {
+		CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
+		
+		CriteriaQuery<JournalEntryPerDayStatistics> criteriaQuery = criteriaBuilder.
+				createQuery(JournalEntryPerDayStatistics.class);
+		
+		Root<JournalEntry> root = criteriaQuery.from(JournalEntry.class);
+		
+		criteriaQuery.select(criteriaBuilder.construct(JournalEntryPerDayStatistics.class,
+				root.get(JournalEntry_.entryType),
+				root.get(JournalEntry_.dueDate),
+				criteriaBuilder.sum(root.get(JournalEntry_.amount))));
+		
+		LocalDate firstDay = referenceMonth.withDayOfMonth(1);
+		LocalDate lastDay = referenceMonth.withDayOfMonth(referenceMonth.lengthOfMonth());
+		
+		criteriaQuery.where(
+				criteriaBuilder.greaterThanOrEqualTo(root.get(JournalEntry_.dueDate), 
+						firstDay),
+				criteriaBuilder.lessThanOrEqualTo(root.get(JournalEntry_.dueDate), 
+						lastDay));
+		
+		criteriaQuery.groupBy(root.get(JournalEntry_.entryType),
+				root.get(JournalEntry_.dueDate));
+		
+		TypedQuery<JournalEntryPerDayStatistics> typedQuery = manager
+				.createQuery(criteriaQuery);
+		
+		return typedQuery.getResultList();
+	}
+	
 	
 	@Override
 	public List<JournalEntryCategoryStatistics> byCategory(LocalDate referenceMonth) {
