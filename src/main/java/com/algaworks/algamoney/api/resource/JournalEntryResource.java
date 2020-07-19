@@ -63,13 +63,13 @@ public class JournalEntryResource {
 	public ResponseEntity<byte[]> reportByPerson(
 			@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate begin,
 			@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate end) throws Exception {
+		
 		byte[] report = journalEntryService.reportByPerson(begin, end);
 		
 		return ResponseEntity.ok()
 				.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_PDF_VALUE)
 				.body(report);
-	}
-	
+	}	
 	
 	@GetMapping("/statistics/by-day")
 	@PreAuthorize("hasAuthority('ROLE_SEARCH_JOURNALENTRY') and #oauth2.hasScope('read')")
@@ -127,7 +127,7 @@ public class JournalEntryResource {
 	
 	@PutMapping("/{id}")
 	@PreAuthorize("hasAuthority('ROLE_REGISTER_JOURNALENTRY')")
-	public ResponseEntity<JournalEntry> atualizar(@PathVariable Long id, @Valid @RequestBody JournalEntry journalEntry) {
+	public ResponseEntity<JournalEntry> update(@PathVariable Long id, @Valid @RequestBody JournalEntry journalEntry) {
 		try {
 			JournalEntry savedJournalEntry = journalEntryService.update(id, journalEntry);
 			return ResponseEntity.ok(savedJournalEntry);
@@ -135,4 +135,5 @@ public class JournalEntryResource {
 			return ResponseEntity.notFound().build();
 		}
 	}
+	
 }
