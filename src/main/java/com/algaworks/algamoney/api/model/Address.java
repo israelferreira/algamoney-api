@@ -2,20 +2,24 @@ package com.algaworks.algamoney.api.model;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Embeddable
 public class Address {
 	
-	private String street;	
+	private String street;
 	@Column(name = "address_number")
-	private String number;	
+	private String number;
 	private String complement;
-	private String neighbourhood;	
+	private String neighbourhood;
 	@Column(name = "zipcode")
-	private String zipCode;	
-	private String city;
-	private String state;
+	private String zipCode;
 	
+	@ManyToOne
+	@JoinColumn(name = "id_city")
+	private City city;
+		
 	public String getStreet() {
 		return street;
 	}
@@ -46,18 +50,13 @@ public class Address {
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
-	public String getCity() {
+	public City getCity() {
 		return city;
 	}
-	public void setCity(String city) {
+	public void setCity(City city) {
 		this.city = city;
 	}
-	public String getState() {
-		return state;
-	}
-	public void setState(String state) {
-		this.state = state;
-	}
+	
 	
 	
 }

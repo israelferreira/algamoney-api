@@ -1,18 +1,18 @@
 CREATE TABLE user (
-	id BIGINT(20) PRIMARY KEY,
+	id BIGINT PRIMARY KEY,
 	name VARCHAR(50) NOT NULL,
 	email VARCHAR(50) NOT NULL,
 	password VARCHAR(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE authorization (
-	id BIGINT(20) PRIMARY KEY,
+	id BIGINT PRIMARY KEY,
 	description VARCHAR(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE user_authorization (
-	id_user BIGINT(20) NOT NULL,
-	id_authorization BIGINT(20) NOT NULL,
+	id_user BIGINT NOT NULL,
+	id_authorization BIGINT NOT NULL,
 	PRIMARY KEY (id_user, id_authorization),
 	FOREIGN KEY (id_user) REFERENCES user(id),
 	FOREIGN KEY (id_authorization) REFERENCES authorization(id)

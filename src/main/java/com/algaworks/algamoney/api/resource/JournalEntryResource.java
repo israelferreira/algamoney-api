@@ -76,7 +76,7 @@ public class JournalEntryResource {
 	public List<JournalEntryPerDayStatistics> byDay() {
 		return this.journalEntryRepository.byDay(LocalDate.now());
 	}
-	
+		
 	@GetMapping("/statistics/by-category")
 	@PreAuthorize("hasAuthority('ROLE_SEARCH_JOURNALENTRY') and #oauth2.hasScope('read')")
 	public List<JournalEntryCategoryStatistics> byCategory() {
