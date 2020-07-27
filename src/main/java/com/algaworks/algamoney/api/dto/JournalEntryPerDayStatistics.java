@@ -7,24 +7,24 @@ import com.algaworks.algamoney.api.model.JournalEntryType;
 
 public class JournalEntryPerDayStatistics {
 
-	private JournalEntryType type;
+	private JournalEntryType entryType;
 	
 	private LocalDate day;
 	
 	private BigDecimal amount;
 
-	public JournalEntryPerDayStatistics(JournalEntryType type, LocalDate day, BigDecimal amount) {
-		this.type = type;
+	public JournalEntryPerDayStatistics(JournalEntryType entryType, LocalDate day, BigDecimal amount) {
+		this.entryType = entryType;
 		this.day = day;
 		this.amount = amount;
 	}
 
-	public JournalEntryType getType() {
-		return type;
+	public JournalEntryType getEntryType() {
+		return entryType;
 	}
 
-	public void setType(JournalEntryType type) {
-		this.type = type;
+	public void setEntryType(JournalEntryType entryType) {
+		this.entryType = entryType;
 	}
 
 	public LocalDate getDay() {

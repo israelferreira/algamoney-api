@@ -30,12 +30,12 @@
 	<spring-security-oauth2.version>2.3.8.RELEASE</spring-security-oauth2.version>
 	<spring-security-jwt.version>1.1.0.RELEASE</spring-security-jwt.version>
 	<jasperreports.version>6.13.0</jasperreports.version>
-    <jasperreports-functions.version>6.13.0</jasperreports-functions.version>
-    <jasperreports-fonts.version>6.13.0</jasperreports-fonts.version>    
-    <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
-    <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
-    <thymeleaf-extras-data-attribute.version>2.0.1</thymeleaf-extras-data-attribute.version>
-    <thymeleaf-extras-java8time.version>3.0.4.RELEASE</thymeleaf-extras-java8time.version>
+	<jasperreports-functions.version>6.13.0</jasperreports-functions.version>
+	<jasperreports-fonts.version>6.13.0</jasperreports-fonts.version>    
+	<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
+	<thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
+	<thymeleaf-extras-data-attribute.version>2.0.1</thymeleaf-extras-data-attribute.version>
+	<thymeleaf-extras-java8time.version>3.0.4.RELEASE</thymeleaf-extras-java8time.version>
   </properties>
 
   <dependencies>
@@ -59,7 +59,7 @@
 	<dependency>
     	<groupId>org.springframework.boot</groupId>
     	<artifactId>spring-boot-starter-mail</artifactId>
-    </dependency>
+	</dependency>
     		
 	<dependency> 
     	<groupId>org.springframework.boot</groupId> 
@@ -108,14 +108,14 @@
 	</dependency>
 	
 	<dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-thymeleaf</artifactId>
-    </dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+	</dependency>
         
-    <dependency>
-        <groupId>org.thymeleaf.extras</groupId>
-        <artifactId>thymeleaf-extras-java8time</artifactId>
-    </dependency>
+	<dependency>
+    	<groupId>org.thymeleaf.extras</groupId>
+    	<artifactId>thymeleaf-extras-java8time</artifactId>
+	</dependency>
         
 	<dependency>
 		<groupId>mysql</groupId>
@@ -130,8 +130,8 @@
 	
 	<!-- Hibernate Java 8 Support -->
 	<dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate-java8</artifactId>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-java8</artifactId>
 	</dependency>
 		
 	<!-- Jackson tool to handle Dates and Time in Java 8 -->
