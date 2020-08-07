@@ -1,4 +1,3 @@
-
 # Algamoney-api<br>
 Esse repositório contém os arquivos do **back-end** do projeto Algamoney, construído e ensinado pela [AlgaWorks](https://www.algaworks.com/) no curso **Fullstack Angular e Spring**.<br>O Algamoney é um software para controle e acompanhamento financeiro de receitas e despesas.<br>
 
@@ -16,6 +15,35 @@ Esse repositório contém os arquivos do **back-end** do projeto Algamoney, cons
  - Apache **Maven** (gerenciador de projetos e dependências)
  - Node.js e NPM (Node Package Manager) para controle de dependências e building do front-end.
  
+ ### Funcionalidades do software
+-  Categorias de lançamento
+      - Buscar todas as categorias cadastradas
+      -  Buscar uma categoria pelo código
+      -  Criar uma nova categoria
+
+ -   Pessoas
+    
+	    -   Buscar todas as pessoas cadastradas
+	    -  Pesquisar pessoas pelo nome
+	    -   Buscar uma pessoa pelo código
+	    -   Cadastrar uma nova pessoa
+	    -   Remover uma pessoa usando o código
+	    -   Atualizar os da dados de uma pessoa
+	    
+ -   Lançamentos financeiros
+    
+	  -    Buscar lançamentos
+	    -  Buscar lançamentos pela descrição e data de vencimento
+	    -  Buscar um lançamento pelo código
+	    -  Criar um novo lançamento
+	    -  Remover um lançamento
+	    -  Atualizar um lançamento
+
+- Relatórios em PDF com informações de lançamentos
+- Envio de e-mail automático para lembrete de lançamentos próximos da data de vencimento
+- Segurança
+	- Registrar usuários pelo banco de dados com diferentes privilégios de acessos às funcionalidades
+
  ### URLs
 
 |  URL |  Método | Descrição |
