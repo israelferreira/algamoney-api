@@ -10,7 +10,7 @@
   <parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>2.3.2.RELEASE</version>
+	<version>2.3.5.RELEASE</version>
 	<relativePath/>
   </parent>
 	
@@ -26,7 +26,7 @@
   	<failOnMissingWebXml>false</failOnMissingWebXml>
   	
   	<commons-lang3.version>3.10</commons-lang3.version>
-	<hibernate-jpamodelgen.version>5.4.18.Final</hibernate-jpamodelgen.version>
+	<hibernate-jpamodelgen.version>5.4.23.Final</hibernate-jpamodelgen.version>
 	<spring-security-oauth2.version>2.3.8.RELEASE</spring-security-oauth2.version>
 	<spring-security-jwt.version>1.1.0.RELEASE</spring-security-jwt.version>
 	<jasperreports.version>6.13.0</jasperreports.version>
@@ -149,31 +149,31 @@
 	<!-- JPA 2 static metamodel generator -->
 	<?ignore
 	<dependency>
-	    <groupId>org.hibernate</groupId>
-	    <artifactId>hibernate-jpamodelgen</artifactId>
-	    <version>${hibernate-jpamodelgen.version}</version><!--$NO-MVN-MAN-VER$-->
-	    <optional>true</optional>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-jpamodelgen</artifactId>
+		<version>${hibernate-jpamodelgen.version}</version><!--$NO-MVN-MAN-VER$-->
+		<optional>true</optional>
 	</dependency>
 	?>
 	
 	<!-- JasperReports -->
-    <dependency>
+	<dependency>
         <groupId>net.sf.jasperreports</groupId>
         <artifactId>jasperreports</artifactId>
-        <version>${jasperreports.version}</version>
-    </dependency>
+       	<version>${jasperreports.version}</version>
+	</dependency>
                 
-    <dependency>
-        <groupId>net.sf.jasperreports</groupId>
-        <artifactId>jasperreports-functions</artifactId>
-        <version>${jasperreports-functions.version}</version>
-    </dependency>
-        
-    <dependency>
-        <groupId>net.sf.jasperreports</groupId>
-        <artifactId>jasperreports-fonts</artifactId>
-        <version>${jasperreports-fonts.version}</version>
-    </dependency>
+	<dependency>
+		<groupId>net.sf.jasperreports</groupId>
+		<artifactId>jasperreports-functions</artifactId>
+		<version>${jasperreports-functions.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>net.sf.jasperreports</groupId>
+		<artifactId>jasperreports-fonts</artifactId>
+		<version>${jasperreports-fonts.version}</version>
+	</dependency>
   </dependencies>
 
 	<build>
@@ -188,8 +188,8 @@
 	
 	<repositories>
         <repository>
-            <id>jr-ce-releases</id>
-            <url>http://jaspersoft.artifactoryonline.com/jaspersoft/jr-ce-releases</url>
+        	<id>jr-ce-releases</id>
+        	<url>http://jaspersoft.artifactoryonline.com/jaspersoft/jr-ce-releases</url>
         </repository>
     </repositories>
     
