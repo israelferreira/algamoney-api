@@ -5,7 +5,7 @@ Esse repositório contém os arquivos do **back-end** do projeto Algamoney, cons
 
 <br>Ele foi desenvolvido com as seguintes tecnologias:
 
- - Back-end: **API REST** com o framework **Spring Boot** 2.3 no **Java** 8
+ - Back-end: **API REST** com o framework **Spring Boot** 2.4 no **Java** 11
  - Front-end: Single-Page Application (SPA) com **Angular** 10
  - Biblioteca de componentes **PrimeNG** na interface de usuário
  - Autenticação e autorização de usuário com **OAuth 2** e **JWT** (JSON Web Token)
@@ -73,7 +73,7 @@ Esse repositório contém os arquivos do **back-end** do projeto Algamoney, cons
 |`http://localhost:8080/algamoney-api/cities?state={id}` | GET | Retorna uma lista de cidades baseada no ID do estado passado por parâmetro |
  
 ## Como executar o projeto
-O projeto da Algaworks foi pensado para ser empacotado no formato jar e executado em servlet container, como o Jetty ou Tomcat. No meu projeto eu o adaptei para a build ser feita no formato WAR e executar no servidor de aplicação JBoss WildFly 19.
+O projeto da Algaworks foi pensado para ser empacotado no formato jar e executado em servlet container, como o Jetty ou Tomcat. No meu projeto eu o adaptei para a build ser feita no formato WAR e executar no servidor de aplicação JBoss WildFly 21.
 
 Edite o arquivo `application.properties` em `algamoney-api/src/main/resources` com as informações necessárias correspondentes às configurações da sua máquina (usuário/senha do banco de dados e também do provedor de email para envio automático do sistema).
 O projeto foi construído com a IDE Eclipse. Para executá-lo:

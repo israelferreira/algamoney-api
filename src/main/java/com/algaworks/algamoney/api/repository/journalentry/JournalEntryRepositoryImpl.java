@@ -15,7 +15,7 @@ import javax.persistence.criteria.Root;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
-import org.springframework.util.StringUtils;
+import org.springframework.util.ObjectUtils;
 
 import com.algaworks.algamoney.api.dto.JournalEntryCategoryStatistics;
 import com.algaworks.algamoney.api.dto.JournalEntryPerDayStatistics;
@@ -170,17 +170,17 @@ public class JournalEntryRepositoryImpl implements JournalEntryRepositoryQuery {
 			Root<JournalEntry> root) {
 		List<Predicate> predicates = new ArrayList<>();
 		
-		if (!StringUtils.isEmpty(journalEntryFilter.getDescription())) {
+		if (!ObjectUtils.isEmpty(journalEntryFilter.getDescription())) {
 			predicates.add(builder.like(
 					builder.lower(root.get(JournalEntry_.DESCRIPTION)), "%" + journalEntryFilter.getDescription().toLowerCase() + "%"));
 		}
 		
-		if (!StringUtils.isEmpty(journalEntryFilter.getDueDateFrom())) {
+		if (!ObjectUtils.isEmpty(journalEntryFilter.getDueDateFrom())) {
 			predicates.add(
 					builder.greaterThanOrEqualTo(root.get(JournalEntry_.DUE_DATE), journalEntryFilter.getDueDateFrom()));
 		}
 		
-		if (!StringUtils.isEmpty(journalEntryFilter.getDueDateTo())) {
+		if (!ObjectUtils.isEmpty(journalEntryFilter.getDueDateTo())) {
 			predicates.add(
 					builder.lessThanOrEqualTo(root.get(JournalEntry_.DUE_DATE), journalEntryFilter.getDueDateTo()));
 		}		
