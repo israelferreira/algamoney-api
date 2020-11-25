@@ -44,6 +44,15 @@ Esse repositório contém os arquivos do **back-end** do projeto Algamoney, cons
 - Segurança
 	- Registrar usuários pelo banco de dados com diferentes privilégios de acessos às funcionalidades
 
+### Softwares usados no desenvolvimento
+
+* [OpenJDK 11 (LTS) x64](https://adoptopenjdk.net/)
+* [WildFly 21.0.0](https://www.wildfly.org/downloads/)
+* [Eclipse IDE 2020-09 - Java EE](https://www.eclipse.org/downloads/packages/)
+* [MySQL Community Server 8.0](https://dev.mysql.com/downloads/mysql/)
+* [Postman 7.36](https://www.postman.com/downloads/)
+* [Jaspersoft Studio CE 6.12](https://community.jaspersoft.com/project/jaspersoft-studio/releases/)
+
  ### URLs
 
 |  URL |  Método | Descrição |
@@ -84,4 +93,4 @@ O projeto foi construído com a IDE Eclipse. Para executá-lo:
 4.  Importe o projeto baixado
 5.  Selecione o projeto, clique com o botão direito do mouse, clique em Run As > Run on Server > Selecione o WildFly.
 6.  O projeto irá ser executado.
-7. Para testar os recursos das URLs acima, use alguma ferramenta de testes de API, como o [Postman](https://www.postman.com/); ou execute o cliente do front-end.
+7. Para testar os recursos das URLs acima, use alguma ferramenta de testes de API, como o **Postman**; ou execute o cliente do front-end.
