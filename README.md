@@ -28,7 +28,7 @@ Esse repositório contém os arquivos do **back-end** do projeto Algamoney, cons
 	    -   Buscar uma pessoa pelo código
 	    -   Cadastrar uma nova pessoa
 	    -   Remover uma pessoa usando o código
-	    -   Atualizar os da dados de uma pessoa
+	    -   Atualizar os dados de uma pessoa
 	    
  -   Lançamentos financeiros
     
