@@ -1,6 +1,5 @@
 package com.algaworks.algamoney.api.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +18,6 @@ public class Category {
 	
 	@NotNull
 	@Size(min = 3, max = 20)
-	@Column(name = "name")
 	private String name;
 
 	public Long getId() {
