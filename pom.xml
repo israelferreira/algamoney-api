@@ -25,7 +25,7 @@
     <failOnMissingWebXml>false</failOnMissingWebXml>
     
     <commons-lang3.version>3.10</commons-lang3.version>
-    <hibernate-jpamodelgen.version>5.4.24.Final</hibernate-jpamodelgen.version>
+    <hibernate-jpamodelgen.version>5.4.26.Final</hibernate-jpamodelgen.version>
     <spring-security-oauth2.version>2.3.8.RELEASE</spring-security-oauth2.version>
     <spring-security-jwt.version>1.1.0.RELEASE</spring-security-jwt.version>
     <jasperreports.version>6.13.0</jasperreports.version>
@@ -121,14 +121,12 @@
     </dependency>
     
     <!-- JPA 2 static metamodel generator -->
-    <?ignore
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-jpamodelgen</artifactId>
       <version>${hibernate-jpamodelgen.version}</version><!--$NO-MVN-MAN-VER$-->
       <optional>true</optional>
     </dependency>
-    ?>
     
     <!-- JasperReports -->
     <dependency>
