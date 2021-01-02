@@ -121,4 +121,4 @@ O projeto foi construído com a IDE Eclipse. Para executá-lo:
 ---
 ### Autor
 Feito por Israel Ferreira. 👋🏽 Entre em contato!
-[![Gmail Badge](https://img.shields.io/badge/-israelferreira.github@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:israelferreira.github@gmail.com)](mailto:israelferreira.github@gmail.com)
+[![Email Badge](https://img.shields.io/badge/-israelferreira5@outlook.com-c14438?style=for-the-badge&color=blue&link=mailto:israelferreira5@outlook.com)](mailto:israelferreira5@outlook.com)
