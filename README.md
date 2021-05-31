@@ -46,7 +46,7 @@ Esse repositório contém os arquivos do **back-end** do projeto Algamoney, cons
 
 ### Softwares usados no desenvolvimento
 
-* [OpenJDK 16 (LTS) - JVM HotSpot](https://adoptopenjdk.net)
+* [OpenJDK 16 - JVM HotSpot](https://adoptopenjdk.net)
 * [Docker Desktop for Windows v3.0.0](https://www.docker.com/products/docker-desktop)
 * [Eclipse IDE 2020-09 for Enterprise Java](https://www.eclipse.org/downloads/packages)
 * [Postman 7.36](https://www.postman.com/downloads)
