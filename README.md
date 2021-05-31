@@ -9,7 +9,7 @@ Esse repositório contém os arquivos do **back-end** do projeto Algamoney, cons
  - Front-end: Single-Page Application (SPA) com **Angular** 10
  - Biblioteca de componentes **PrimeNG** na interface de usuário
  - Autenticação e autorização de usuário com **OAuth 2** e **JWT** (JSON Web Token)
- - Banco de dados **MySQL** 8
+ - Banco de dados **MariaDB** 10+
  - **Flyway** (migrações do banco de dados)
  - Jaspersoft **JasperReports** (relatórios em PDF)
  - Apache **Maven** (gerenciador de projetos e dependências)
@@ -108,10 +108,10 @@ O projeto foi construído com a IDE Eclipse. Para executá-lo:
 1. Baixe e instale o Docker Desktop
 2. Faça o Download do zip do projeto ou clone o repositório Git e extraia o conteúdo do arquivado compactado
 3. Navegue até a pasta do projeto e abra o Prompt de Comando do Windows ou Terminal do GNU/Linux
-4. Execute o comando `docker-compose up`. Ele irá criar um container chamado algamoney_mysql contendo a imagem do banco de dados MySQL.
+4. Execute o comando `docker-compose up`. Ele irá criar um container chamado algamoney_mariadb contendo a imagem do banco de dados MariaDB.
 ![docker-compose up](https://user-images.githubusercontent.com/37079133/103035859-f5df2000-4546-11eb-8311-41d8e62212a8.png)<br>
-5. Para ter acesso ao banco de dados MySQL Server 8, abra outra janela do Prompt de Comando/Terminal e execute o comando `docker exec -it mysql bash -l`, agora execute o comando `mysql -uroot -p`. O usuário do mysql nesse caso é o root, se for outro, altere o que está depois de -u. Digite a senha e pressione ENTER. Agora é possível criar e alterar *schemas*.
-![docker mysql](https://user-images.githubusercontent.com/37079133/103035861-f7104d00-4546-11eb-98ab-3739976e6731.png)<br>
+5. Para ter acesso ao banco de dados MariaDB, abra outra janela do Prompt de Comando/Terminal e execute o comando `docker exec -it mysql bash -l`, agora execute o comando `mysql -uroot -p`. O usuário do MariaDB nesse caso é o root, se for outro, altere o que está depois de -u. Digite a senha e pressione ENTER. Agora é possível criar e alterar *schemas*.
+![docker mariadb](https://user-images.githubusercontent.com/37079133/103035861-f7104d00-4546-11eb-98ab-3739976e6731.png)<br>
 6.  Abra o Eclipse IDE
 7.  Importe o projeto baixado: Vá em File > Open Projects from File System. Selecione a pasta pela opção "Directory" e pressione Finish.
 8.  Espere o Maven baixar todas as dependências.

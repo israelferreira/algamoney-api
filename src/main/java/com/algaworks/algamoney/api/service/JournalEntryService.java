@@ -119,7 +119,7 @@ public class JournalEntryService {
 		Person person = null;
 		
 		if (journalEntry.getPerson() != null) {
-			person = personRepository.getOne(journalEntry.getPerson().getId());
+			person = personRepository.getById(journalEntry.getPerson().getId());
 		}
 		
 		if (person == null || person.isInactive()) {
