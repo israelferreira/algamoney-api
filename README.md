@@ -5,7 +5,7 @@ Esse repositório contém os arquivos do **back-end** do projeto Algamoney, cons
 
 <br>Ele foi desenvolvido com as seguintes tecnologias:
 
- - Back-end: **API REST** com o framework **Spring Boot** 2.4 no **Java** 11
+ - Back-end: **API REST** com o framework **Spring Boot** 2.5 no **Java** 16
  - Front-end: Single-Page Application (SPA) com **Angular** 10
  - Biblioteca de componentes **PrimeNG** na interface de usuário
  - Autenticação e autorização de usuário com **OAuth 2** e **JWT** (JSON Web Token)
@@ -46,7 +46,7 @@ Esse repositório contém os arquivos do **back-end** do projeto Algamoney, cons
 
 ### Softwares usados no desenvolvimento
 
-* [OpenJDK 11 (LTS) - JVM HotSpot](https://adoptopenjdk.net)
+* [OpenJDK 16 (LTS) - JVM HotSpot](https://adoptopenjdk.net)
 * [Docker Desktop for Windows v3.0.0](https://www.docker.com/products/docker-desktop)
 * [Eclipse IDE 2020-09 for Enterprise Java](https://www.eclipse.org/downloads/packages)
 * [Postman 7.36](https://www.postman.com/downloads)
